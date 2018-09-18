@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let arr = ["Hugo and Malcome", "Andy Kat and Gavin", "Tiff and Jackie", "Santiago and Ruby", "Steven and Jordan", "McKenzie and Alex"]
+  // let arr = ["Hugo and Malcome", "Andy Kat and Gavin", "Tiff and Jackie", "Santiago and Ruby", "Steven and Jordan", "McKenzie and Alex"]
+  let arr = ["Santiago", "Celestino", "Jordan"]
 
   function pick_students(arr){
     return function(){
       let luckyNum = Math.floor(Math.random()*arr.length);
       const group = arr[luckyNum]
       arr = arr.slice(0, luckyNum).concat(arr.slice(luckyNum + 1))
-      console.log(arr)
-      if (arr.length){
         return group
-      } else {
-        return "All done!"
-      }
     }
   }
 
@@ -20,7 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let h3 = document.querySelector('h3')
   let button = document.querySelector('button')
   button.addEventListener("click", () => {
-    h3.innerHTML = pick()
+    let pickedStudent = pick()
+    if (pickedStudent){
+      h3.innerHTML = pickedStudent
+    } else {
+      h3.innerHTML = "All done!"
+    }
+  })
+
+  let body = document.querySelector('body')
+  button.addEventListener("click", () => {
+    body.style.backgroundColor = `rgb(${Math.floor(Math.random()*250)}, ${Math.floor(Math.random()*250)}, ${Math.floor(Math.random()*250)})`
   })
 
 
