@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // let arr = ["Hugo and Malcome", "Andy Kat and Gavin", "Tiff and Jackie", "Santiago and Ruby", "Steven and Jordan", "McKenzie and Alex"]
-  let arr = ["Santiago", "Celestino", "Jordan"]
+  let arr = ["Adam F", "Adam K", "Bill", "Brenden", "Chris", "Codey", "Ernie", "Frankie", "Gino", "Jerry", "Kate", "Lorenzo", "Luka", "Mallory", "Matt", "Pete", "Rei", "Jamil", "Sylwia", "Susan", "Yoonmi"]
 
   function pick_students(arr){
     return function(){
